@@ -7,11 +7,12 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(120deg, #ffe53bd8, #ff2525da, #ff258bda);
+    background-image : linear-gradient(to left, purple, indigo, cyan);
     animation: degrade-animado 5s infinite alternate;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 500% 100%;
 }
 
 .relogio {
@@ -20,9 +21,11 @@ body {
     justify-content: space-around;
     height: 200px;
     width: 550px;
-    background: linear-gradient(320deg, #ffe53bd8, #ff2525da, #ff258bda);
+    background-image : linear-gradient(to left, cyan, indigo, purple);
     border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, .5);
+    background-size: 500% 100%;
+    animation: degrade-animado 5s infinite alternate;
 }
 
 .relogio div {
@@ -46,4 +49,13 @@ body {
 
 .relogio span.tempo {
     font-size: 10px;
+}
+
+@keyframes degrade-animado {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }   
 }
